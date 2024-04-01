@@ -1,0 +1,19 @@
+name: Test compilation
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test_compilation:
+    runs-on: ubuntu-latest
+    container:
+      image: epitechcontent/epitest-docker:latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Compilation
+      run: make
+      timeout-minutes: 1
