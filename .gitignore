@@ -1,0 +1,7 @@
+*.a
+*.gc*
+*.log
+*.o
+*.sh
+.vscode/
+tester/
